@@ -6,8 +6,10 @@ This repository contains the replication files for the article *“Battle of wor
 
 Due to Twitter’s/X’s Terms of Service, raw tweet text and associated metadata cannot be shared. To ensure reproducibility, we provide:
 
-- **Tweet IDs** underlying all analyses (can be rehydrated via the Twitter/X API)  
-- **Enriched dataset** with characteristics of Members of the European Parliament (MEPs), excluding tweet text  
+- **Tweet IDs** underlying all analyses (can be rehydrated via the Twitter API)  
+- **Enriched dataset** with characteristics of Members of the European Parliament (MEPs), excluding tweet text.  
+  - To keep file sizes manageable and suitable for upload, this dataset is provided in **Parquet format** (`tweet_ids_enriched.parquet`).  
+  - Parquet is a compressed, columnar storage format that can be read in both Python (via `pandas`) and R, and ensures the dataset remains small enough to distribute.  
 
 ## Python Workflow (Preprocessing, NLP, Network Analysis)
 
